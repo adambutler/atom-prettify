@@ -12,6 +12,7 @@ prettify = (editor) ->
   beautify = switch
     when fileExt == "html" then beautifier.html
     when fileExt == "js" then beautifier.js_beautify
+    when fileExt == "json" then beautifier.js_beautify
     when fileExt == "css" then beautifier.css
     when fileExt == "less" then beautifier.css
     when fileExt == "scss" then beautifier.css
