@@ -1,0 +1,17 @@
+{
+  "name": "atom-prettify",
+  "main": "./lib/prettify",
+  "version": "0.1.0",
+  "description": "Prettify your HTML",
+  "activationEvents": [
+    "prettify:prettify"
+  ],
+  "repository": "https://github.com/adambutler/atom-prettify",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.39.0"
+  },
+  "dependencies": {
+    "js-beautify": "~1.4.x"
+  }
+}
