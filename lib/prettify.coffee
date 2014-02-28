@@ -8,14 +8,14 @@ module.exports =
       prettify(editor)
 
 prettify = (editor) ->
-  fileExt = editor.getTitle()?.split('.').pop()
+  scopeName = editor.getGrammar()?.scopeName
   beautify = switch
-    when fileExt == "html" then beautifier.html
-    when fileExt == "js" then beautifier.js_beautify
-    when fileExt == "json" then beautifier.js_beautify
-    when fileExt == "css" then beautifier.css
-    when fileExt == "less" then beautifier.css
-    when fileExt == "scss" then beautifier.css
+    when scopeName is "text.html.basic" then beautifier.html
+    when scopeName is "source.js" then beautifier.js_beautify
+    when scopeName is "source.json" then beautifier.js_beautify
+    when scopeName is "source.css" then beautifier.css
+    when scopeName is "source.css.less" then beautifier.css
+    when scopeName is "source.scss" then beautifier.css
   sortableRanges = RangeFinder.rangesFor(editor)
   sortableRanges.forEach (range) ->
     text = editor.getTextInBufferRange(range)
