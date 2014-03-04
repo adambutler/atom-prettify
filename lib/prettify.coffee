@@ -12,5 +12,5 @@ prettify = (editor) ->
   sortableRanges.forEach (range) ->
     text = editor.getTextInBufferRange(range)
     text = beautify text,
-      "indent_size": 2
+      'indent_size': atom.config.get('editor.tabLength')
     editor.setTextInBufferRange(range, text)
