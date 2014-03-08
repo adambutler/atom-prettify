@@ -2,7 +2,7 @@
   {
     'label': 'Edit'
     'submenu': [
-      'label': 'text'
+      'label': 'Text'
       'submenu': [
         { 'label': 'Prettify HTML', 'command': 'prettify:prettify' }
       ]
