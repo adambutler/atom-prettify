@@ -3,8 +3,8 @@ beautify = require('js-beautify').html
 
 module.exports =
   activate: ->
-    atom.workspaceView.command 'prettify:prettify', '.editor', ->
-      editor = atom.workspaceView.getActivePaneItem()
+    atom.commands.add 'atom-text-editor', 'prettify:prettify': (event) ->
+      editor = @getModel()
       prettify(editor)
 
 prettify = (editor) ->
