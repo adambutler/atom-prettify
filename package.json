@@ -3,9 +3,9 @@
   "main": "./lib/prettify",
   "version": "0.1.1",
   "description": "Prettify your HTML",
-  "activationEvents": [
-    "prettify:prettify"
-  ],
+  "activationCommands": {
+    "atom-text-editor": ["prettify:prettify"]
+  },
   "repository": "https://github.com/adambutler/atom-prettify",
   "license": "MIT",
   "engines": {
