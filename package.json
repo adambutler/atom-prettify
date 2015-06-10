@@ -1,7 +1,7 @@
 {
   "name": "atom-prettify",
   "main": "./lib/prettify",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Prettify your HTML",
   "activationCommands": {
     "atom-text-editor": ["prettify:prettify"]
