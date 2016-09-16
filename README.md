@@ -13,7 +13,16 @@ Prettify your HTML
     
 ##### Atom
 
+##### Mac
+
   1. Open settings with `Cmd+,`
   2. Go to `Packages`
+  3. Search for `atom-prettify`
+  4. Click Install
+
+##### Windows
+
+  1. Open settings with `Ctrl+,`
+  2. Go to `Install`
   3. Search for `atom-prettify`
   4. Click Install
