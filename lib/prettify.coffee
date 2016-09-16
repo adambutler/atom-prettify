@@ -1,5 +1,5 @@
 RangeFinder = require './range-finder'
-beautify = require('js-beautify').html
+beautifier = require('js-beautify')
 
 module.exports =
   activate: ->
@@ -8,6 +8,14 @@ module.exports =
       prettify(editor)
 
 prettify = (editor) ->
+  scopeName = editor.getGrammar()?.scopeName
+  beautify = switch
+    when scopeName is "text.html.basic" then beautifier.html
+    when scopeName is "source.js" then beautifier.js_beautify
+    when scopeName is "source.json" then beautifier.js_beautify
+    when scopeName is "source.css" then beautifier.css
+    when scopeName is "source.css.less" then beautifier.css
+    when scopeName is "source.scss" then beautifier.css
   sortableRanges = RangeFinder.rangesFor(editor)
   sortableRanges.forEach (range) ->
     text = editor.getTextInBufferRange(range)
