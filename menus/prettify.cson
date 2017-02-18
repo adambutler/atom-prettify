@@ -1,3 +1,9 @@
+'context-menu':
+  'atom-text-editor, .tree-view.full-menu .file':[
+    label: 'Prettify HTML',
+    command: 'prettify:prettify'
+  ]
+
 'menu': [
   {
     'label': 'Edit'
